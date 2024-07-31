@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Photographer Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="gallery">
+            <h2>My Work</h2>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/00.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/007.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/10049.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/110.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/111.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/112.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/113.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/134.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/1345.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/14.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/1435.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/145.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/199.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/334.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/4356.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/463.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/503.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/54.jpeg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/546.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/651.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/657.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/667.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/701.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/727.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/790.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/9.jpeg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/91.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/96.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/DSC02114.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/g1.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/i3.jpg');" onclick="openModal(this)"></div>
+            <div class="gallery-item" style="background-image: url('images/new portfolio/i5.jpg');" onclick="openModal(this)"></div>
+        </section>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        function openModal(element) {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("img01").src = element.style.backgroundImage.slice(5, -2);
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+       <section class="videos">
+        <h2>Featured Videos</h2>
+        <iframe src="videos/video1.mp4" frameborder="0" allowfullscreen></iframe>
+        <iframe src="videos/video2.mp4" frameborder="0" allowfullscreen></iframe>
+    </section>
+    </main>
+</body>
+</html>

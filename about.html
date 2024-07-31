@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --transition: all 300ms ease-in-out;
+            --dark-color: #332e29;
+            --light-color: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            outline: 0;
+        }
+
+        html {
+            font-size: 10px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-size: 1.6rem;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+
+        button, .btn {
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--dark-color);
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .vh-100 {
+            min-height: 100vh;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+            line-height: 1.3;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .py-7 {
+            padding: 7rem 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+        }
+
+        .lead {
+            opacity: 0.8;
+            padding: 1rem 0;
+            font-size: 1.7rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .about-section {
+            background-color: #f5f5f5;
+            padding: 50px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .about-image {
+            height: 480px;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-image img:hover {
+            transform: rotateY(20deg) rotateX(10deg) scale(1.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-text h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .about-text h2::after {
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background-color: var(--dark-color);
+            bottom: -10px;
+            left: 0;
+        }
+
+        .about-text p {
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 1.8;
+            color: var(--dark-color);
+        }
+
+        .about-subsection {
+            margin-top: 3rem;
+        }
+
+        .about-subsection h3 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .about-subsection ul {
+            list-style-type: disc;
+            padding-left: 2rem;
+        }
+
+        .about-subsection ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            margin-top: 3rem;
+            font-size: 1.4rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+        }
+
+        .footer-content h3 {
+            color: var(--light-color);
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        .footer-content ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .footer-content ul li {
+            margin: 0 1rem;
+        }
+
+        .footer-content ul li a {
+            color: var(--light-color);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .footer-content ul li a:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Photographer Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/mypic.png" alt="Photographer">
+                </div>
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>Welcome to our photography portfolio! We are dedicated to capturing life's most precious moments with creativity and passion. With over 6 years of experience in digital photography and cinematography, we have worked on a wide range of projects, including destination weddings, professional model photoshoots, and event coverage. Our goal is to create stunning visuals that tell your unique story. Explore our portfolio to see the world through our lens!</p>
+
+                    <div class="about-subsection">
+                        <h3>Professional Accomplishments</h3>
+                        <ul>
+                            <li>Created high-quality images and video for clients' properties.</li>
+                            <li>Coordinated photo shoots with the Head Chef for online menus, website graphics, and web commercials.</li>
+                            <li>Maintained quality with high volume cropping and retouching up to 100 images daily.</li>
+                            <li>Specialized in destination wedding shoots, professional model photoshoots, architecture photography, and more.</li>
+                            <li>Worked on numerous projects, including 360+ pre-wedding shoots, 400+ engagement shoots, and 250+ wedding shoots.</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-subsection">
+                        <h3>Education</h3>
+                        <p>Bachelor's Degree in Photography and Video Production, 2022<br>
+                           Asian Academy of Film & Television, Noida International University</p>
+                    </div>
+
+                    <div class="about-subsection">
+                        <h3>Relevant Skills</h3>
+                        <ul>
+                            <li>Expertise in operating professional-grade photography and videography equipment.</li>
+                            <li>Proficient in video-editing software such as Final Cut Pro and Adobe Premiere.</li>
+                            <li>Strong understanding of camera settings, exposure, and white balance.</li>
+                            <li>Remarkable ability to manage a photography team.</li>
+                            <li>Strong storytelling and visual composition skills.</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-subsection">
+                        <h3>Equipment</h3>
+                        <ul>
+                            <li>Camera: Sony A7S3</li>
+                            <li>Lenses: Sigma 24-70mm 2.8 DG DN ART, Sigma 35mm 1.4 DG DN ART, Viltrox 85mm 1.8, Samyang 18mm 2.8</li>
+                            <li>Gimbal: Dji Ronin S2 Pro Combo Kit</li>
+                            <li>Camera Monitor, Godox Lights, Microphones, Tripod, Monopods, Headphones, Laptop</li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3>Objective</h3>
+                       
+                        <p>To obtain a dynamic, challenging opportunity that contributes to the outstanding success of the business via my 6+ years Digital Photographer & Cinematography experience from various industries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>1087A/24 Jagdish Colony, Rohtak, Haryana, India</p>
+                <p>Phone: +91-9896614181</p>
+                <p>Email: Parasbhatia0981@gmail.com</p>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
