@@ -161,6 +161,29 @@ header nav ul.active {
         
     }
 }
+/* View More link styles */
+.view-more {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.view-more-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.view-more-link:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
 
 #header .container{
     width: 100%;
