@@ -17,6 +17,7 @@
         z-index: 1120;
       }
       </style>
+      
 </head>
 <body>
     <div class="whatsapp">
@@ -26,6 +27,7 @@
       </a>
     </div>
     <!-- header -->
+     <div class="black">
     <header id = "header" class = "vh-100 flex">
         <div class = "container">
             <div class = "header-content">
@@ -57,7 +59,13 @@
             </div>
         </div>
         <nav>
-            <ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul id="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -66,6 +74,7 @@
             </ul>
         </nav>
     </header>
+</div>
     <!-- end of header -->
 
     <!-- main content -->
@@ -146,12 +155,12 @@
 
                     <div class = "portfolio-grid grid">
                         <div><img src = "images/1.jpg"></div>
-                        <div><img src = "images/2.jpeg"></div>
+                        <div><img src = "images/2.jpg"></div>
                         <div><img src = "images/3.jpg"></div>
                         <div><img src = "images/4.jpg"></div>
                         <div><img src = "images/5.jpg"></div>
                         <div><img src = "images/6.jpg"></div>
-                        <div><img src = "images/701.jpg"></div>
+                        <div><img src = "images/new portfolio/701.jpg"></div>
                     </div>
                 </div>
             </div>
@@ -194,7 +203,7 @@
                     </div>
                     <div class = "insta-grid grid">
                         <div><img src = "images/1.jpg"></div>
-                        <div><img src = "images/2.jpeg"></div>
+                        <div><img src = "images/2.jpg"></div>
                         <div><img src = "images/3.jpg"></div>
                         <div><img src = "images/4.jpg"></div>
                     </div>
@@ -221,5 +230,7 @@
 
     <!-- script js -->
     <script src = "js/script.js"></script>
+    <script src = "js/script.min.js"></script>
+    
 </body>
 </html>

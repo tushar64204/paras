@@ -46,6 +46,9 @@ img{
 .vh-100{
     min-height: 100vh;
 }
+.black {
+    background-color: #000;
+}
 h1, h2, h3{
     margin-top: 0;
     line-height: 1.3;
@@ -72,6 +75,15 @@ h1, h2, h3{
     font-weight: 300;
     line-height: 1.8;
 }
+/* Default header styles */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/header-banner.jpg') center/cover no-repeat fixed;
+    justify-content: flex-start;
+    align-items: flex-end;
+   
+}
+
+/* Navigation styles */
 header nav ul {
     list-style: none;
     margin: 0;
@@ -87,17 +99,77 @@ header nav ul li a {
     color: white;
     text-decoration: none;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+    }
+    
+    header nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    
+    .menu-toggle .bar {
+        width: 100%;
+        height: 4px;
+        background-color: white;
+    }
+}
+
+/* Show the menu when toggled */
+header nav ul.active {
+    display: flex;
+}
+
 /* header */
 #header{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/header-banner.png') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/header-banner.jpg') center/cover no-repeat fixed;
     justify-content: flex-start;
     align-items: flex-end;
+    
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    #header {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/insta-pic.jpg') center/cover no-repeat fixed;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: fit-content;
+        min-height: 50vh;
+        
+    }
+}
+
 #header .container{
     width: 100%;
+    
+
 }
 .header-content{
     padding-bottom: 4rem;
+    
 }
 .header-content h1{
     font-size: 4.5rem;
@@ -128,7 +200,35 @@ header nav ul li a {
 .social-links li a:hover{
     opacity: 0.9;
 }
-
+/* Mobile styles */
+@media (max-width: 768px) {
+    .header-content {
+        padding-bottom: 2rem;
+        text-align: center;
+        
+    }
+    
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header-content h3 {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin-top: 1rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    
+    .social-links li a {
+        width: 30px;
+        height: 30px;
+        margin-right: 0.5rem;
+    }
+}
 /* about */
 .about-left{
     margin-bottom: 4rem;
@@ -307,7 +407,9 @@ header nav ul li a {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 3rem;
         row-gap: 0;
+    
     }
+
 }
 @media(min-width: 576px){
     .title h2{
