@@ -61,16 +61,18 @@ main {
     margin-top: 20px;
 }
 
-.photo {
+.photo, .gallery-item {
     width: 30%;
     height: 200px;
     background-size: cover;
     background-position: center;
     margin-bottom: 20px;
+    display: inline-block;
     transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
-.photo:hover {
+.photo:hover, .gallery-item:hover {
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -90,7 +92,7 @@ main {
     margin-bottom: 20px;
 }
 
-
+/* Gallery styles */
 .gallery {
     text-align: center;
 }
@@ -101,10 +103,11 @@ main {
 
 .gallery-item {
     width: 30%;
-    height: 200px;
+    height: auto; /* Adjust the height automatically based on aspect ratio */
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
     background-size: cover;
     background-position: center;
-    margin-bottom: 20px;
+    margin: 1%;
     display: inline-block;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
@@ -115,6 +118,7 @@ main {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -128,10 +132,15 @@ main {
 }
 
 .modal-content {
-    margin: 15% auto;
-    display: block;
+    position: relative;
+    margin: 5% auto;
     width: 80%;
     max-width: 700px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh; /* Ensure it takes up 80% of the viewport height */
+    background-color: #000; /* Background color to handle image visibility */
 }
 
 .close {
@@ -151,6 +160,23 @@ main {
     cursor: pointer;
 }
 
+/* Navigation icons inside the modal */
+.modal-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    user-select: none;
+    padding: 0 20px;
+}
+
+.modal-navigation div {
+    cursor: pointer;
+}
 /* Contact Page Styles */
 .contact {
     max-width: 600px;
