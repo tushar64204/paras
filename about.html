@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="style.css">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -30,7 +30,89 @@
             font-size: 1.6rem;
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
+            background-color: #e6dfbf1a;
+           
+         
         }
+        .header {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('images/contact-pic.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.attractive-heading {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    color: white;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attractive-heading:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.content p {
+    font-size: 18px;
+    margin: 20px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #ff6810;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.content button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
 
         button, .btn {
             cursor: pointer;
@@ -95,7 +177,7 @@
         }
 
         .about-section {
-            background-color: #f5f5f5;
+            background-color: #00000000;
             padding: 50px 0;
         }
 
@@ -127,7 +209,7 @@
         .about-text {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: left;
         }
 
         .about-text h2 {
@@ -154,6 +236,35 @@
             font-weight: 300;
             line-height: 1.8;
             color: var(--dark-color);
+            background-color: var(--light-color);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateX(100%);
+            animation: slide-in-right 1s forwards;
+        }
+
+        .about-text p:nth-child(even) {
+            background-color: #ececec;
+            color: #333;
+            transform: translateX(-100%);
+            animation: slide-in-left 1s forwards;
+        }
+
+        @keyframes slide-in-right {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slide-in-left {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .about-subsection {
@@ -225,33 +336,81 @@
         .footer-content ul li a:hover {
             opacity: 0.7;
         }
+        @media (max-width: 768px) {
+            .about-content {
+                position: relative;
+            }
+
+            .about-image img {
+                width: 100%;
+            
+            }
+
+            .about-text {
+                padding: 15px;
+                position: relative;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content h1 {
+                font-size: 36px;
+
+            }
+            .about-content {
+                position: relative;
+            }
+
+            .about-image img {
+                width: 100%;
+            
+            }
+
+            .about-text {
+                padding: 15px;
+                position: relative;
+            }
+            .about-image img {
+                width: 100%;
+              
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .about-text h2 {
+                font-size: 2rem;
+            }
+
+            .about-text p {
+                font-size: 1.4rem;
+            }
+
+            .about-text h3 {
+                font-size: 1.8rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-       
-            <div class="navbar">
-            
-                <div class="menu">
-                    <nav>
-            <div class="menu-toggle" id="menu-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+        <div class="navbar">
+            <div class="menu">
+                <nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <ul id="nav-list">
+                        <a href="index.html">Home</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="index.html#contact">Contact</a>
+                    </ul>
+                </nav>
             </div>
-
-            <ul id="nav-list">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="index.html#contact">Contact</a>
-              
-            </ul>
-        </nav>
-                </div>
-            </div>
-           
-      
+        </div>
     </header>
     <section class="about-section">
         <div class="container">
@@ -262,20 +421,17 @@
                 <div class="about-text">
                     <h2>About Us</h2>
                     <p>Welcome to our photography portfolio! We are dedicated to capturing life's most precious moments with creativity and passion. With over 6 years of experience in digital photography and cinematography, we have worked on a wide range of projects, including destination weddings, professional model photoshoots, and event coverage. Our goal is to create stunning visuals that tell your unique story. Explore our portfolio to see the world through our lens!</p>
-
-               
-                        <h3>Professional Accomplishments</h3>
-                        <div class="about-text">
-                        
-                            <p>Created high-quality images and video for clients' properties.</p>
-                            <p>Coordinated photo shoots with the Head Chef for online menus, website graphics, and web commercials.</p>
-                            <p>Maintained quality with high volume cropping and retouching up to 100 images daily.</p>
-                            <p>Specialized in destination wedding shoots, professional model photoshoots, architecture photography, and more.</p>
-                            <p>Worked on numerous projects, including 360+ pre-wedding shoots, 400+ engagement shoots, and 250+ wedding shoots.</p>
-                  
-                        </div>
-                    
-
+                <h1><span class="attractive-heading">Paras Bhatia</span></h1>
+                </div>
+                <div class="about-text">
+                    <h3>Professional Accomplishments</h3>
+                    <p>Created high-quality images and video for clients' properties.</p>
+                    <p>Coordinated photo shoots with the Head Chef for online menus, website graphics, and web commercials.</p>
+                    <p>Maintained quality with high volume cropping and retouching up to 100 images daily.</p>
+                    <p>Specialized in destination wedding shoots, professional model photoshoots, architecture photography, and more.</p>
+                    <p>Worked on numerous projects, including 360+ pre-wedding shoots, 400+ engagement shoots, and 250+ wedding shoots.</p>
+                </div>
+                <div class="about-text">
                     <div class="about-subsection">
                         <h3>Education</h3>
                         <p>Bachelor's Degree in Photography and Video Production, 2022<br>
@@ -292,41 +448,45 @@
                             <p>Strong storytelling and visual composition skills.</p>
                         </ul>
                     </div>
-
-                    <div class="about-subsection">
-                        <h3>Equipment</h3>
-                        <ul>
-                            <p>Camera: Sony A7S3</p>
-                            <p>Lenses: Sigma 24-70mm 2.8 DG DN ART, Sigma 35mm 1.4 DG DN ART, Viltrox 85mm 1.8, Samyang 18mm 2.8</p>
-                            <p>Gimbal: Dji Ronin S2 Pro Combo Kit</p>
-                            <p>Camera Monitor, Godox Lights, Microphones, Tripod, Monopods, Headphones, Laptop</p>
-                        </ul>
-                    </div>
-
-                    <div class="contact-info">
-                        <h3>Objective</h3>
-                       
-                        <p>To obtain a dynamic, challenging opportunity that contributes to the outstanding success of the business via my 6+ years Digital Photographer & Cinematography experience from various industries.</p>
-                    </div>
+                  
                 </div>
             </div>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <div class="footer-content">
-                <h3>Contact Us</h3>
-                <p class = "lead"><i class = "fas fa-location"></i>  sector 22, Noida</p>
-                <p class = "lead"><i class = "fas fa-phone-alt"></i>+91-9896614181</p>
-                <p class = "lead"><i class = "fas fa-envelope"></i> parasproduction7@gmail.com</p>
-                <!-- <ul>
-                    <p><a href="#">Facebook</a></p>
-                    <p><a href="#">Instagram</a></p>
-                    <p><a href="#">Twitter</a></p>
-                </ul> -->
+                <h3>Let's Connect</h3>
+                <div class="contact-info">
+                    
+
+
+
+
+                    <p><strong>Email:</strong>parasproduction7@gmail.com</p>
+                    <p><strong>Phone:</strong> +91-9896614181</p>
+                    <p><strong>Location:</strong> sector 22, Noida, UP, India</p>
+                </div>
+                <p>&copy; 2024 Paras Bhatia Photography. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const aboutParagraphs = document.querySelectorAll('.about-text p');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            aboutParagraphs.forEach(paragraph => {
+                observer.observe(paragraph);
+            });
+        });
+    </script>
 </body>
 </html>
