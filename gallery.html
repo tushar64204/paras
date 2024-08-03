@@ -8,8 +8,13 @@
 </head>
 <body>
     <header>
-        <h1>Photographer Portfolio</h1>
-        <nav>
+        <div class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <!-- <a href="#"><img src="logo.png" alt="Logo"></a> -->
+                </div>
+                <div class="menu">
+                    <nav>
             <div class="menu-toggle" id="menu-toggle">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -17,15 +22,27 @@
             </div>
 
             <ul id="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="index.html#contact">Contact</a>
+              
             </ul>
         </nav>
+                </div>
+            </div>
+            <div class="content">
+                <h1>Creative Direction, Design & Photography</h1>
+                <p>I shoot because I see. I shoot because if I don't, I don't know who will. Activism is seen as a dirty word. I shoot because I find peace in being.</p>
+                <button onclick="location.href='index.html#contact';">Contact Us</button>
+
+               
+            </div>
+        </div>
     </header>
     <main>
         <section class="gallery">
-            <h2>My Work</h2>
+            <h1><span class="attractive-heading">My Work</span></h1>
             <div class="gallery-item" style="background-image: url('images/new portfolio/00.jpg');" onclick="openModal(this)"></div>
             <div class="gallery-item" style="background-image: url('images/new portfolio/007.jpg');" onclick="openModal(this)"></div>
             <div class="gallery-item" style="background-image: url('images/new portfolio/10049.jpg');" onclick="openModal(this)"></div>
@@ -71,11 +88,11 @@
         </div>
         </div>
       
-              <section class="videos">
-        <h2>Featured Videos</h2>
-        <iframe src="videos/video1.mp4" frameborder="0" allowfullscreen></iframe>
-        <iframe src="videos/video2.mp4" frameborder="0" allowfullscreen></iframe>
-    </section>
+        <section class="videos">
+               <h1><span class="attractive-heading">Featured Videos</span></h2>
+            <iframe src="https://www.youtube.com/embed/rs1ZgEMIS-A" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/nrfc7imrCeg" allowfullscreen></iframe>
+        </section>
     </main>
     <script src = "script.js"></script>
     <script src = "js/script.js"></script>
